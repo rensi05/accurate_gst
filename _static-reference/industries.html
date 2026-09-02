@@ -1,0 +1,384 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Industries We Serve | Accurate GST Consulting</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet">
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .industry-card:hover .industry-overlay {
+            opacity: 0.9;
+        }
+        .industry-card:hover img {
+            transform: scale(1.05);
+        }
+        .active-dot {
+            position: relative;
+        }
+        .active-dot::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 4px;
+            background-color: currentColor;
+            border-radius: 50%;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#f7f9fc",
+                      "surface-container": "#eceef1",
+                      "primary-fixed-dim": "#89ceff",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "surface-container-highest": "#e0e3e6",
+                      "inverse-on-surface": "#eff1f4",
+                      "secondary-fixed": "#ffdad6",
+                      "secondary-fixed-dim": "#ffb4ab",
+                      "on-surface": "#191c1e",
+                      "surface-tint": "#006491",
+                      "on-tertiary-fixed": "#1b1c1c",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed-variant": "#93000d",
+                      "tertiary": "#5f5e5e",
+                      "outline-variant": "#bec8d2",
+                      "primary": "#006491",
+                      "error": "#ba1a1a",
+                      "inverse-surface": "#2d3133",
+                      "error-container": "#ffdad6",
+                      "on-background": "#191c1e",
+                      "primary-container": "#1ea5e8",
+                      "on-tertiary-container": "#333333",
+                      "on-surface-variant": "#3e4850",
+                      "on-primary-fixed": "#001e2f",
+                      "outline": "#6e7881",
+                      "on-error-container": "#93000a",
+                      "tertiary-fixed-dim": "#c8c6c6",
+                      "background": "#f7f9fc",
+                      "inverse-primary": "#89ceff",
+                      "primary-fixed": "#c9e6ff",
+                      "surface-variant": "#e0e3e6",
+                      "tertiary-container": "#9d9b9b",
+                      "surface-dim": "#d8dadd",
+                      "on-secondary": "#ffffff",
+                      "surface": "#f7f9fc",
+                      "on-secondary-container": "#fffbff",
+                      "surface-container-high": "#e6e8eb",
+                      "on-primary": "#ffffff",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed": "#410002",
+                      "secondary": "#bb0013",
+                      "on-primary-container": "#003752",
+                      "secondary-container": "#e71520",
+                      "tertiary-fixed": "#e4e2e1",
+                      "surface-container-low": "#f2f4f7",
+                      "on-primary-fixed-variant": "#004c6e",
+                      "on-tertiary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "container-max": "1280px",
+                      "base": "8px",
+                      "margin-mobile": "20px",
+                      "section-gap": "120px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Plus Jakarta Sans"],
+                      "body-lg": ["Inter"],
+                      "label-md": ["Inter"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "headline-md": ["Plus Jakarta Sans"],
+                      "body-md": ["Inter"],
+                      "display": ["Plus Jakarta Sans"],
+                      "label-sm": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                      "display": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface-bright text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-lowest/85 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-base md:px-margin-desktop max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-2"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfqc14q24GrllnbVwGFFUT889iIS1DkibxRVjoShHUuW7g1NOlpBBzf7Il17lahVDR3ieDEwlNhpmI3gHsOuE_yCHkIIC_UI9ZqzobzZyru8dRZFr07zmAp37oPh6-taegZtHD39LnCusIlqvYkgpSWShKR3V6wUaHKbIMRZsr4M8kPsUcj3xJLoqY9YRgMb5Uh3DCw1MjwZt7rdt8njYd9kgBgk05mQxlmDpWFG9REqNsklikBiOVYX53jPb5qCR6TQ" alt="Accurate GST Logo" class="h-12 w-auto object-contain"></div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="index.html">Home</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="about.html">About</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="services.html">Services</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="industries.html">Industries</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-200 font-label-md text-label-md" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a href="tel:+919376377778" class="hidden lg:block text-primary font-bold px-4 py-2 rounded-lg hover:bg-primary/5 transition-all">Call Now</a>
+<a href="booking.html" class="bg-primary-container text-on-primary-container px-6 py-3 rounded-lg font-bold shadow-md hover:scale-95 transition-all">Book Consultation</a>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative py-24 overflow-hidden">
+
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 text-center">
+<span class="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary font-label-md text-label-md mb-6">Expertise Across Sectors</span>
+<h1 class="font-display text-headline-lg-mobile md:text-display text-on-surface mb-6 tracking-tight">Specialized GST Solutions for <span class="text-primary">Every Industry</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">
+                    Navigating complex tax landscapes requires industry-specific knowledge. Our team delivers tailored advisory that addresses the unique regulatory challenges of your business sector.
+                </p>
+</div>
+</section>
+<!-- Bento Grid Industries -->
+<section class="pb-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Manufacturing -->
+<div class="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant industry-card h-[400px] transition-all duration-700 opacity-100 translate-y-0">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" data-alt="A professional, clean high-angle shot of a modern automated manufacturing facility with robotic arms and sleek white flooring. The lighting is bright and industrial, emphasizing precision and modern technology. The color palette features whites, grays, and corporate blue accents to match a premium financial UI." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClVbP-gCD18uezcdIVhwlKux651PNIkT_ZSht50aznkVF9kASrs3MqAyW8SmonhXAtcisM3qtGyKWqkuFOEE4Pd6KpJVFOUtf7eQTQkHrd7570DVIGx0Ww-glVIs_rzTxtd84p0F-c5khR6lK1qoh096Bm0RPo1PRpGNPNAOgoB0Jw7-PSTz75_zvElOovDNr2jX2bwTJPdUBcAAeK_2Fvr3knqh_QkfmyWs4OzMXxYSZAZiqd28lH">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent industry-overlay transition-opacity duration-300"></div>
+<div class="absolute bottom-0 p-8 text-white">
+<span class="material-symbols-outlined mb-4 text-primary-container" style="font-size: 32px;">factory</span>
+<h3 class="font-headline-md text-headline-md mb-2">Manufacturing</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">Optimizing complex ITC reconciliation and ensuring seamless compliance for multi-state manufacturing units and job-work processing.</p>
+</div>
+</div>
+<!-- Trading -->
+<div class="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant industry-card h-[400px] transition-all duration-700 opacity-100 translate-y-0">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" data-alt="A busy, organized modern wholesale warehouse with high shelves and sophisticated inventory management systems. Warm, soft lighting highlights rows of neatly stacked goods. The atmosphere is efficient and professional, with a clean aesthetic suitable for a high-end tax advisory firm's website." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXL28exPAlWnwI0NgkUN3FnDEqVtJeOI2jnSEHiW3PAJXv_ha-zGilaDcdmELKf2CNh7gyixHWBOuAcqQXEumQ4LFhkKb4mqbTmkcpbDE9D-9HoqpFSxIekMV5ZfJUFGXwOVFGK3enmc7dMOFPm2SNa9btDeM-F34qp4C9xeBF-Lg8fQzjC_fxqhLaN2lmYMxZ3Zjb8N4QkemOkbAOUfsdGtPWvYSMlSb84dMvD9_8d-TdvEAcDdfy">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent industry-overlay transition-opacity duration-300"></div>
+<div class="absolute bottom-0 p-8 text-white">
+<span class="material-symbols-outlined mb-4 text-primary-container" style="font-size: 32px;">inventory_2</span>
+<h3 class="font-headline-md text-headline-md mb-2">Trading</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">Simplifying HSN classification, stock transfers, and valuation challenges for high-volume trading businesses and wholesalers.</p>
+</div>
+</div>
+<!-- Retail -->
+<div class="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant industry-card h-[400px] transition-all duration-700 opacity-100 translate-y-0">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" data-alt="An upscale, minimalist retail interior with soft lighting and elegant displays. The focus is on a modern checkout area featuring digital POS systems and high-end materials. The scene conveys reliability and sophisticated consumer commerce with a bright, airy light-mode feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE1BGl66D2Vx7I8AlM55JCKVpqRbJhG0SpxzBMztHJT2Mxb5gcPXCFmAwJljrEv2OQO5D1XIbX9L45zQk_3IFZSNc-J3a-5mUnchSgsPJ4qq6c8VeHT9vmfx_L-jbEv3wJO-twbsmbpcOAB7-uKp9_0CuYw939qgCg-uA_ffpFAlXipurRPCk1LfetrkmBtMSfcxZWjrk4NN6_aOEpBJRziZFhnEA3MBpIKp7tLd2YlPxmuNuxHMxn">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent industry-overlay transition-opacity duration-300"></div>
+<div class="absolute bottom-0 p-8 text-white">
+<span class="material-symbols-outlined mb-4 text-primary-container" style="font-size: 32px;">shopping_bag</span>
+<h3 class="font-headline-md text-headline-md mb-2">Retail</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">Managing B2C invoicing, loyalty program taxation, and discount-related GST adjustments for modern retail chains.</p>
+</div>
+</div>
+<!-- Construction -->
+<div class="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant industry-card h-[400px] transition-all duration-700 opacity-100 translate-y-0">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" data-alt="A cinematic architectural shot of a modern steel and glass building under construction at dusk. Golden hour light glints off clean surfaces. The image represents growth, structural integrity, and high-value infrastructure projects with a premium corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXDAZteKQDvyJcL-DHfJHXGhrfqo1KLeoIxZmmEWsVsh3ClvfLf3_AjQemCOiORRYN0wozFkayxvQh38U76ZxO-aDRgMMgenBmsZxdUixcsS_db4J6lteWCHAT4pY8WOPOu_XGnJnLjngVE81Ujig2jsIyKsWtN-1ojF0K81yIUoTkvtOMy2Un79U0JjTgt-UB5f3ldG1aMiX3icLIghuYLsf8nk2qOAAk9TszVsJur1UtfQsGfVNb">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent industry-overlay transition-opacity duration-300"></div>
+<div class="absolute bottom-0 p-8 text-white">
+<span class="material-symbols-outlined mb-4 text-primary-container" style="font-size: 32px;">architecture</span>
+<h3 class="font-headline-md text-headline-md mb-2">Construction</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">Navigating anti-profiteering norms and complex RCM liabilities for developers and infrastructure contractors.</p>
+</div>
+</div>
+<!-- Healthcare -->
+<div class="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant industry-card h-[400px] transition-all duration-700 opacity-100 translate-y-0">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" data-alt="A pristine, modern hospital hallway with advanced medical equipment and soft, sterile lighting. The atmosphere is clinical yet technologically advanced, conveying care and professional reliability. The palette is dominated by light blues and whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBx3ZDN_4L_Yvt1hiIcR_1upfVyk4syflXmhpdSPRS3MLBGoW5Hir7guu_1EXMJDkd2ddYavvpB1oWR03Yp7Vy7A_6rluzYAh_L5_LXLZySJu8Kaa2iYC4xm2PqoSxIXfJHyNYA7LgufxqAx63yn8BZl9K2TFqPHjMe2XvdVEyMeNUQ6hnIhjPeyr3CTztQ-oTJdvxsTojntQoN3EEdGmytScGYv4gn6nzDZiLXcs2RJE7OQxbqiyHw">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent industry-overlay transition-opacity duration-300"></div>
+<div class="absolute bottom-0 p-8 text-white">
+<span class="material-symbols-outlined mb-4 text-primary-container" style="font-size: 32px;">medical_services</span>
+<h3 class="font-headline-md text-headline-md mb-2">Healthcare</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">Resolving taxation complexities for composite health services and managing pharma supply chain compliance.</p>
+</div>
+</div>
+<!-- Logistics -->
+<div class="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant industry-card h-[400px] transition-all duration-700 opacity-100 translate-y-0">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" data-alt="A high-tech logistics hub with cargo ships and cargo planes at a modern port during the blue hour. Glowing digital traces indicate global connectivity and movement. The scene is sophisticated, large-scale, and represents global trade efficiency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBttrjByy4wpB9-OvCtgY-uo55RudJAl5BAdcPsJIO8V9fG2N_6Rsm48L3yROGvD0fnWacE_Nb_kYbSHeVMigkxZHR4SZkYAkdmpLYghQZq7ge2WTvzB9xldP1w5cigGRkQ3XN_kvJAxN-otCUgLlpgelPquxd6FCjx5ZUZ-2j5jr72LEDoseffH8LZg4GnZdntBNCObTrAIDbMrdUj7LuOdWQlzx9uRDYfOsyEHFb-itiHiJ0HSUen">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent industry-overlay transition-opacity duration-300"></div>
+<div class="absolute bottom-0 p-8 text-white">
+<span class="material-symbols-outlined mb-4 text-primary-container" style="font-size: 32px;">local_shipping</span>
+<h3 class="font-headline-md text-headline-md mb-2">Logistics</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">Expert handling of e-way bill management, GTA services, and interstate transit compliance requirements.</p>
+</div>
+</div>
+<!-- E-Commerce -->
+<div class="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant industry-card h-[400px] lg:col-span-2 transition-all duration-700 opacity-100 translate-y-0">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" data-alt="A futuristic e-commerce fulfillment center with advanced sorting technology and glowing data visualizations overlayed on top. The aesthetic is high-tech, fast-paced, and clean. Blue and white lighting creates a sense of digital innovation and speed." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuaoMna29Y3doMWAijadNNTuoISuCoRKYe9QHG0R_ufSDcC2WIIkkEKsNcQZ6Um8fX_MXfHY4Nf21ClKmGlukuhgBv4bydKIVf3XPndRRjeko81yimQ7jJhXDlsraT0QM4x6daP13EJB5bXKgwZ_WBhfgKGcygtX4TRF6WIORbaEqr_JwDNq03Ozj0j3gQdngN7ehSc3iEkWCbOm64mMrzve2n05iXpccz6mf1ZMumQNEfC4bwQ7NJ">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent industry-overlay transition-opacity duration-300"></div>
+<div class="absolute bottom-0 p-8 text-white w-full md:w-2/3">
+<span class="material-symbols-outlined mb-4 text-primary-container" style="font-size: 32px;">shopping_cart</span>
+<h3 class="font-headline-md text-headline-md mb-2">E-Commerce</h3>
+<p class="font-body-md text-body-md text-white/80">Handling TCS obligations, marketplace reconciliation, and returns processing for vendors across major platforms like Amazon, Flipkart, and Shopify.</p>
+<button class="mt-4 flex items-center gap-2 text-primary-container font-label-md text-label-md hover:underline">View Digital Solutions <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+<!-- IT Services -->
+<div class="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant industry-card h-[400px] transition-all duration-700 opacity-100 translate-y-0">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" data-alt="A minimalist modern office workspace with high-end tech setups and large windows overlooking a city skyline. The focus is on clean lines, sophisticated software interfaces, and a professional digital service environment. Modern light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp5qXpzEx1da7rh5yo3Jd-W6WU9h6d9wNZNjjicx6uMQimUvYA4kaozmD6CWFbgLRfcvYKNsYn3OBpXnUxDzUybkIeSqN5NJbQ3bYL4fLH8wjQK4DpPpfu_Pct7F5cHve7e6FHuCRn0viOXhiCAGuNOfuvD9Rsdxn4Mam7wZfN0Fa2s2VI7MF-kxk4fMTANuX8aUXX_KYafuExxkC3YKKAHDWN4VxfeBYumGP71y6btuJizMysy3je">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent industry-overlay transition-opacity duration-300"></div>
+<div class="absolute bottom-0 p-8 text-white">
+<span class="material-symbols-outlined mb-4 text-primary-container" style="font-size: 32px;">developer_mode</span>
+<h3 class="font-headline-md text-headline-md mb-2">IT Services</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">Advisory on export of services, LUT filing, and SEZ compliance for software and consulting firms.</p>
+</div>
+</div>
+<!-- Hospitality -->
+<div class="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant industry-card h-[400px] transition-all duration-700 opacity-100 translate-y-0">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" data-alt="A luxury hotel lobby with high ceilings, warm designer lighting, and premium finishes. The scene is elegant and welcoming, representing high-end hospitality and meticulous service standards. The mood is warm, sophisticated, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGKuXq8oUG8QnVBlCzqEJ2IkXiY_AVMvXjes-0ymXKYg2ms0UT8cYm17bQ9FQrFNz9FOfoCmIZTTCenGVPbhtmsiXHFpYIEsmtIK4SjLlbVWBfcqU3j0DVGbQ3z98184FNDrwqglgLL-YUMj-JbCWFrHc4eqDyAURnc1gbn5_JbMlW62NzSQKXA_30BNkDvsPJhqMvdEca0-Kj3RD6OETsY6idJstpictERj-pKA76vgu0clxHxBDb">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent industry-overlay transition-opacity duration-300"></div>
+<div class="absolute bottom-0 p-8 text-white">
+<span class="material-symbols-outlined mb-4 text-primary-container" style="font-size: 32px;">hotel</span>
+<h3 class="font-headline-md text-headline-md mb-2">Hospitality</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">Managing differential GST rates for accommodation and dining services, and input tax optimization for property maintenance.</p>
+</div>
+</div>
+<!-- Education -->
+<div class="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant industry-card h-[400px] transition-all duration-700 opacity-100 translate-y-0">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" data-alt="A modern university library or lecture hall with bright, natural light and clean architectural lines. The environment is intellectual, spacious, and professional. It conveys a sense of high-level academic administration and educational excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHOuVYOoLQVRGINNykgEmkbZ8T-xZFfFvdZZE6GKECsH01hgB52JzMBABPCY1hS2qTPKWp48X19DBXUfRFU5XaT1o4oqB0PyhGO_gnBmV09JbB_SARKM71WNPx8f3BRQIJ210zYlVtydUkQcOxx158yF-ByNNhIqr4wpPXHpRvGhjQYpFq2XJmr7w3ZxD-k5UpSTnl3iNmz0zYvpE8LblIW3njftLYPt9P0rTn2McDRo1A-gkDZL91">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent industry-overlay transition-opacity duration-300"></div>
+<div class="absolute bottom-0 p-8 text-white">
+<span class="material-symbols-outlined mb-4 text-primary-container" style="font-size: 32px;">school</span>
+<h3 class="font-headline-md text-headline-md mb-2">Education</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">Determining taxability for auxiliary educational services and compliance for non-profit educational trusts.</p>
+</div>
+</div>
+<!-- Professional Services -->
+<div class="group relative overflow-hidden rounded-xl bg-white shadow-sm border border-outline-variant industry-card h-[400px] transition-all duration-700 opacity-100 translate-y-0">
+<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-500" data-alt="A prestigious law firm or consulting board room with leather chairs and a glass table reflecting the skyline. The setting is formal, authoritative, and speaks to high-level advisory and professional integrity. The lighting is focused and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK5mX9bCliWWRtxJ0y3r2gxrsV-KHcc90FPLSTTre6FHCtT0anpyJ4sq5QlfxAlvx5GGPlln82UtPP6JyZqwbAj2mRpktrqFv23oEkqURFQeHI0FHWKE9YwLo1OyMHm4DysvcWlbEw37nHivJvbGczSbhtAm5XZSvKNqgiyFIPl8rWHMw8dAin0uwUyRj7FOIQtIygHg5_LA7dx3OAlZSATnrkUlmzejtD-43T57Z_3K3hndwRpXO_">
+<div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent industry-overlay transition-opacity duration-300"></div>
+<div class="absolute bottom-0 p-8 text-white">
+<span class="material-symbols-outlined mb-4 text-primary-container" style="font-size: 32px;">gavel</span>
+<h3 class="font-headline-md text-headline-md mb-2">Professional Services</h3>
+<p class="font-body-md text-body-md text-white/80 line-clamp-3">Comprehensive compliance for legal, medical, and financial practitioners, including cross-border service advisory.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Advisory CTA -->
+<section class="bg-primary text-white py-24">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center justify-between gap-gutter bg-white/10 p-12 rounded-3xl backdrop-blur-sm">
+<div class="md:w-2/3">
+<h2 class="font-headline-lg text-headline-lg mb-4">Don't see your industry?</h2>
+<p class="font-body-lg text-body-lg text-white/80">We have experience across over 50+ niche sectors. Our consultants can build a custom tax strategy tailored specifically for your unique business model.</p>
+</div>
+<div class="md:w-1/3 flex justify-end">
+<button class="bg-white text-primary px-10 py-5 rounded-xl font-bold text-headline-md hover:scale-105 transition-all shadow-xl">Get Custom Quote</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-inverse-surface text-inverse-on-surface w-full pt-section-gap pb-base">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter pb-16 border-b border-white/10">
+<div class="space-y-6 lg:col-span-1">
+<a href="index.html" class="inline-flex items-center gap-2 font-headline-md text-headline-md font-bold text-white">Accurate<span class="text-primary-fixed-dim">GST</span></a>
+<p class="text-white/60 text-body-md">Empowering businesses with authoritative tax solutions and relentless commitment to compliance excellence.</p>
+<div class="flex gap-3">
+<a aria-label="Facebook" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all" href="#">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg>
+</a>
+<a aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all" href="#">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.55.55.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.13s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.76c-.55.55-1.1.9-1.76 1.15-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.13-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76A4.9 4.9 0 0 1 5.44.54C6.08.29 6.81.12 7.87.07 8.94.02 9.28 0 12 0Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.25A3.25 3.25 0 1 1 12 6.75a3.25 3.25 0 0 1 0 6.5ZM17.5 4a1.13 1.13 0 1 0 0 2.25A1.13 1.13 0 0 0 17.5 4Z" transform="translate(0 2)"/></svg>
+</a>
+<a aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all" href="#">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.68H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-widest text-sm">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-white/60 hover:text-white transition-all" href="about.html">About Us</a></li>
+<li><a class="text-white/60 hover:text-white transition-all" href="services.html">Services</a></li>
+<li><a class="text-white/60 hover:text-white transition-all" href="industries.html">Industries</a></li>
+<li><a class="text-white/60 hover:text-white transition-all" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-widest text-sm">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-white/60 hover:text-white transition-all" href="services.html">GST Registration</a></li>
+<li><a class="text-white/60 hover:text-white transition-all" href="services.html">Return Filing</a></li>
+<li><a class="text-white/60 hover:text-white transition-all" href="services.html">Audit &amp; Assurance</a></li>
+<li><a class="text-white/60 hover:text-white transition-all" href="services.html">Tax Advisory</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-widest text-sm">Contact Us</h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-white/60">
+<span class="material-symbols-outlined text-primary-fixed-dim">mail</span>
+<a class="hover:text-white transition-all" href="mailto:info@accuratetaxbiz.com">info@accuratetaxbiz.com</a>
+</li>
+<li class="flex items-center gap-3 text-white/60">
+<span class="material-symbols-outlined text-primary-fixed-dim">phone_in_talk</span>
+<a class="hover:text-white transition-all" href="tel:+919376377778">+91 93763 77778</a>
+</li>
+<li class="flex items-center gap-3 text-white/60">
+<span class="material-symbols-outlined text-primary-fixed-dim">location_on</span>
+Rajkot, Gujarat, India
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-sm font-label-sm text-white/50">© 2026 Accurate GST Consulting. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-label-sm font-label-sm text-white/50 hover:text-white hover:underline" href="privacy-policy.html">Privacy Policy</a>
+<a class="text-label-sm font-label-sm text-white/50 hover:text-white hover:underline" href="terms-of-service.html">Terms of Service</a>
+<a class="text-label-sm font-label-sm text-white/50 hover:text-white hover:underline" href="cookie-policy.html">Cookies</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal for cards
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.industry-card').forEach(card => {
+                card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(card);
+            });
+        });
+    </script>
+
+
+</body></html>

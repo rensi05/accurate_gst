@@ -1,0 +1,359 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>About Us | Accurate GST</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f7f9fc",
+                    "surface-container": "#eceef1",
+                    "primary-fixed-dim": "#89ceff",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "surface-container-highest": "#e0e3e6",
+                    "inverse-on-surface": "#eff1f4",
+                    "secondary-fixed": "#ffdad6",
+                    "secondary-fixed-dim": "#ffb4ab",
+                    "on-surface": "#191c1e",
+                    "surface-tint": "#006491",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#93000d",
+                    "tertiary": "#5f5e5e",
+                    "outline-variant": "#bec8d2",
+                    "primary": "#006491",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2d3133",
+                    "error-container": "#ffdad6",
+                    "on-background": "#191c1e",
+                    "primary-container": "#1ea5e8",
+                    "on-tertiary-container": "#333333",
+                    "on-surface-variant": "#3e4850",
+                    "on-primary-fixed": "#001e2f",
+                    "outline": "#6e7881",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "background": "#f7f9fc",
+                    "inverse-primary": "#89ceff",
+                    "primary-fixed": "#c9e6ff",
+                    "surface-variant": "#e0e3e6",
+                    "tertiary-container": "#9d9b9b",
+                    "surface-dim": "#d8dadd",
+                    "on-secondary": "#ffffff",
+                    "surface": "#f7f9fc",
+                    "on-secondary-container": "#fffbff",
+                    "surface-container-high": "#e6e8eb",
+                    "on-primary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#410002",
+                    "secondary": "#ed1c24",
+                    "on-primary-container": "#003752",
+                    "secondary-container": "#e71520",
+                    "tertiary-fixed": "#e4e2e1",
+                    "surface-container-low": "#f2f4f7",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "margin-mobile": "20px",
+                    "section-gap": "120px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "body-lg": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "body-md": ["Inter"],
+                    "display": ["Plus Jakarta Sans"],
+                    "label-sm": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "display": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #006491 0%, #1ea5e8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-shadow {
+            box-shadow: 0px 4px 20px rgba(0,0,0,0.04);
+        }
+        .card-shadow-hover:hover {
+            box-shadow: 0px 12px 32px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+        }
+    </style>
+</head>
+<body class="bg-surface-bright text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface-lowest/85 glass-nav shadow-sm h-20 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-base md:px-margin-desktop max-w-container-max mx-auto h-full">
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2" href="index.html"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1msTmoRAhPDtnOfafxaX6z1uhlfXeuU-k1PhnFEtJxElj0-RskC0ZK3EkycMY2dWYyrwI_LMJzH0FET5rlJ1z8nGR4WZaSLZTRlM1rq9Iv8DdKSRZ3YCrUDQhrjXppBMO9AJQGk4kk-jbvFxkt0pu48Bt042CJj_BK_WlM3fQHdbjwWC7bwNsQ4zqx3ZFCJQ7KgTckhOi8RdDZVXje_sdU3bYXkHpDWer3Fj7gcEWsregkrmUAsUW-8udB3o5i6Tunw" alt="Accurate GST Logo" class="h-12 w-auto object-contain py-1"></a>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="index.html">Home</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md text-label-md" href="about.html">About</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="services.html">Services</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="industries.html">Industries</a>
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="contact.html">Contact</a>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-4">
+<a href="tel:+919376377778" class="hidden lg:flex items-center gap-2 text-primary font-bold hover:opacity-80 transition-all">
+<span class="material-symbols-outlined" data-icon="call">call</span>
+                    Call Now
+                </a>
+<a href="booking.html" class="bg-secondary text-white px-6 py-2.5 rounded-full font-label-md text-label-md font-bold hover:scale-105 active:scale-95 transition-all shadow-md">
+                    Book Consultation
+                </a>
+</div>
+</div>
+</nav>
+
+<!-- Hero -->
+<section class="relative pt-40 pb-20 md:pt-48 md:pb-28 overflow-hidden bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center max-w-3xl">
+<p class="text-primary font-bold font-label-md text-label-md uppercase tracking-[0.2em] mb-4">About Us</p>
+<h1 class="font-headline-lg text-[40px] md:text-display leading-tight text-on-surface">
+                We Build <span class="text-gradient">Financial Fortresses</span>, Not Just Filings
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-6">
+                Accurate GST was founded on a simple idea: tax compliance should be a source of confidence for a business, not anxiety. Ten years on, that idea still drives everything we do.
+            </p>
+</div>
+</section>
+
+<!-- Our Story -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="relative rounded-[32px] overflow-hidden shadow-2xl border border-white/50 aspect-[4/3] order-2 lg:order-1">
+<img class="w-full h-full object-cover" alt="Accurate GST advisory team in discussion" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwI6s8x3gcO7oJSxpmmiOoFI1xF23Byd0AdF82XKgbbVIVTiqnXsaIULP3fl5Q9uHyLCQyZxkZhuFJRZdn7bWBhV_rFoD6LSGqkuFFSc3kQQOgbprUpIf9rmf8omPvdUCAlBpJPnzLuIlpUcuWbfNqJ5ttThqb0HTJmGO5uB1Ho5CVZzaZw2gc9wHf8_U8t8rzMA1sfoUD9--9jsn5yEGHDhvzERyaF7U8W8c0uJcnsffFg-tj4vMY">
+</div>
+<div class="space-y-6 order-1 lg:order-2">
+<p class="text-primary font-bold font-label-md text-label-md uppercase tracking-[0.2em]">Our Story</p>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">A Decade of Precision-First Advisory</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Accurate GST started in 2014 as a two-person practice helping local traders navigate a brand-new tax regime. As GST law matured, so did we &mdash; growing into a full-service compliance partner for over 2,000 businesses, from first-time registrants to multi-state enterprises.</p>
+<p class="text-on-surface-variant font-body-md text-body-md">Today our team of certified GST practitioners, chartered accountants, and litigation specialists handles everything from routine monthly filings to high-stakes departmental audits &mdash; always with the same standard: zero-error accuracy and a straight answer, every time.</p>
+</div>
+</div>
+</section>
+
+<!-- Mission & Values -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">What We Stand For</h2>
+<p class="text-on-surface-variant font-body-md text-body-md">Four principles guide every engagement, from a first-time registration to a multi-year litigation case.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="bg-white p-8 rounded-[24px] card-shadow card-shadow-hover transition-all duration-500">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">verified</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-2">Accuracy First</h3>
+<p class="text-on-surface-variant text-sm">Every return is double-checked against a rigorous internal review process before it's ever filed.</p>
+</div>
+<div class="bg-white p-8 rounded-[24px] card-shadow card-shadow-hover transition-all duration-500">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">handshake</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-2">Radical Transparency</h3>
+<p class="text-on-surface-variant text-sm">No hidden fees, no jargon-filled reports &mdash; just plain-language updates on where your compliance stands.</p>
+</div>
+<div class="bg-white p-8 rounded-[24px] card-shadow card-shadow-hover transition-all duration-500">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">bolt</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-2">Speed with Care</h3>
+<p class="text-on-surface-variant text-sm">Same-day query resolution and a 24-hour turnaround commitment on standard filings.</p>
+</div>
+<div class="bg-white p-8 rounded-[24px] card-shadow card-shadow-hover transition-all duration-500">
+<div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-2">Continuous Expertise</h3>
+<p class="text-on-surface-variant text-sm">Our practitioners train on every GST Council update the week it's issued &mdash; not the week it's due.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Leadership -->
+<section class="py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<p class="text-primary font-bold font-label-md text-label-md uppercase tracking-[0.2em] mb-4">Leadership</p>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">The People Behind the Precision</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-white rounded-[24px] card-shadow p-8 text-center">
+<div class="w-24 h-24 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-5xl">account_circle</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold">Rohan Mehta</h3>
+<p class="text-primary font-label-md text-label-md mb-3">Founder &amp; Managing Partner</p>
+<p class="text-on-surface-variant text-sm">15+ years in indirect tax advisory; leads the firm's litigation and audit representation practice.</p>
+</div>
+<div class="bg-white rounded-[24px] card-shadow p-8 text-center">
+<div class="w-24 h-24 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-5xl">account_circle</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold">Ananya Kapoor</h3>
+<p class="text-primary font-label-md text-label-md mb-3">Head of Compliance</p>
+<p class="text-on-surface-variant text-sm">Oversees monthly filing operations and ITC reconciliation for the firm's enterprise clients.</p>
+</div>
+<div class="bg-white rounded-[24px] card-shadow p-8 text-center">
+<div class="w-24 h-24 rounded-full bg-primary/10 text-primary flex items-center justify-center mx-auto mb-6">
+<span class="material-symbols-outlined text-5xl">account_circle</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold">Vikram Rao</h3>
+<p class="text-primary font-label-md text-label-md mb-3">Director, Advisory</p>
+<p class="text-on-surface-variant text-sm">Advises growing businesses on cross-state GST structuring and registration strategy.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-section-gap bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary rounded-[32px] p-12 md:p-16 text-center relative overflow-hidden">
+<h2 class="font-headline-lg text-headline-lg text-white mb-4">Ready to Work With a Team That Gets It Right?</h2>
+<p class="text-white/80 font-body-md text-body-md max-w-xl mx-auto mb-8">Talk to a GST practitioner about your business today &mdash; no obligation, just clarity.</p>
+<a href="contact.html" class="inline-block bg-white text-primary px-8 py-4 rounded-xl font-label-md text-label-md font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all">Book a Consultation</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-inverse-surface text-inverse-on-surface w-full pt-section-gap pb-base">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter pb-16 border-b border-white/10">
+<div class="space-y-6 lg:col-span-1">
+<a href="index.html" class="inline-flex items-center gap-2 font-headline-md text-headline-md font-bold text-white">Accurate<span class="text-primary-fixed-dim">GST</span></a>
+<p class="text-white/60 text-body-md">Empowering businesses with authoritative tax solutions and relentless commitment to compliance excellence.</p>
+<div class="flex gap-3">
+<a aria-label="Facebook" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all" href="#">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg>
+</a>
+<a aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all" href="#">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2c2.72 0 3.06.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.21.6 1.76 1.15.55.55.9 1.1 1.15 1.76.25.64.42 1.37.47 2.43.05 1.06.06 1.4.06 4.13s-.01 3.06-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.76c-.55.55-1.1.9-1.76 1.15-.64.25-1.37.42-2.43.47-1.06.05-1.4.06-4.12.06s-3.06-.01-4.13-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.76-1.15 4.9 4.9 0 0 1-1.15-1.76c-.25-.64-.42-1.37-.47-2.43C2.01 15.06 2 14.72 2 12s.01-3.06.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.21 1.15-1.76A4.9 4.9 0 0 1 5.44.54C6.08.29 6.81.12 7.87.07 8.94.02 9.28 0 12 0Zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.25A3.25 3.25 0 1 1 12 6.75a3.25 3.25 0 0 1 0 6.5ZM17.5 4a1.13 1.13 0 1 0 0 2.25A1.13 1.13 0 0 0 17.5 4Z" transform="translate(0 2)"/></svg>
+</a>
+<a aria-label="LinkedIn" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-primary hover:text-white transition-all" href="#">
+<svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.68H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.56V9h3.56v11.45Z"/></svg>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-widest text-sm">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-white/60 hover:text-white transition-all" href="about.html">About Us</a></li>
+<li><a class="text-white/60 hover:text-white transition-all" href="services.html">Services</a></li>
+<li><a class="text-white/60 hover:text-white transition-all" href="industries.html">Industries</a></li>
+<li><a class="text-white/60 hover:text-white transition-all" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-widest text-sm">Services</h4>
+<ul class="space-y-4">
+<li><a class="text-white/60 hover:text-white transition-all" href="services.html">GST Registration</a></li>
+<li><a class="text-white/60 hover:text-white transition-all" href="services.html">Return Filing</a></li>
+<li><a class="text-white/60 hover:text-white transition-all" href="services.html">Audit &amp; Assurance</a></li>
+<li><a class="text-white/60 hover:text-white transition-all" href="services.html">Tax Advisory</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-widest text-sm">Contact Us</h4>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 text-white/60">
+<span class="material-symbols-outlined text-primary-fixed-dim">mail</span>
+<a class="hover:text-white transition-all" href="mailto:info@accuratetaxbiz.com">info@accuratetaxbiz.com</a>
+</li>
+<li class="flex items-center gap-3 text-white/60">
+<span class="material-symbols-outlined text-primary-fixed-dim">phone_in_talk</span>
+<a class="hover:text-white transition-all" href="tel:+919376377778">+91 93763 77778</a>
+</li>
+<li class="flex items-center gap-3 text-white/60">
+<span class="material-symbols-outlined text-primary-fixed-dim">location_on</span>
+Rajkot, Gujarat, India
+</li>
+</ul>
+</div>
+</div>
+<div class="pt-8 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-label-sm font-label-sm text-white/50">© 2026 Accurate GST Consulting. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="text-label-sm font-label-sm text-white/50 hover:text-white hover:underline" href="privacy-policy.html">Privacy Policy</a>
+<a class="text-label-sm font-label-sm text-white/50 hover:text-white hover:underline" href="terms-of-service.html">Terms of Service</a>
+<a class="text-label-sm font-label-sm text-white/50 hover:text-white hover:underline" href="cookie-policy.html">Cookies</a>
+</div>
+</div>
+</footer>
+<script>
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('h-16');
+                nav.classList.remove('h-20');
+                nav.classList.add('bg-white/95');
+            } else {
+                nav.classList.add('h-20');
+                nav.classList.remove('h-16');
+                nav.classList.remove('bg-white/95');
+            }
+        });
+
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
