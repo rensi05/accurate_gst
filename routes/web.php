@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\ConsultationRequestController;
+use App\Http\Controllers\ContactMessageController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ Route::get('/booking', [BookingController::class, 'create'])->name('booking');
 Route::post('/booking', [BookingController::class, 'store'])->name('booking.store');
 
 Route::post('/consultation-request', [ConsultationRequestController::class, 'store'])->name('consultation-request.store');
+
+Route::post('/contact-message', [ContactMessageController::class, 'store'])->name('contact-message.store');

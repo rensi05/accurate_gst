@@ -172,7 +172,7 @@
 <nav class="fixed top-0 w-full z-50 bg-surface-lowest/85 glass-nav shadow-sm h-20 transition-all duration-300">
 <div class="flex justify-between items-center w-full px-base md:px-margin-desktop max-w-container-max mx-auto h-full">
 <!-- Brand Logo -->
-<a class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2" href="{{ route('home') }}"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1msTmoRAhPDtnOfafxaX6z1uhlfXeuU-k1PhnFEtJxElj0-RskC0ZK3EkycMY2dWYyrwI_LMJzH0FET5rlJ1z8nGR4WZaSLZTRlM1rq9Iv8DdKSRZ3YCrUDQhrjXppBMO9AJQGk4kk-jbvFxkt0pu48Bt042CJj_BK_WlM3fQHdbjwWC7bwNsQ4zqx3ZFCJQ7KgTckhOi8RdDZVXje_sdU3bYXkHpDWer3Fj7gcEWsregkrmUAsUW-8udB3o5i6Tunw" alt="Accurate GST Logo" class="h-12 w-auto object-contain py-1"></a>
+<a class="font-headline-md text-headline-md font-bold text-primary flex items-center gap-2" href="{{ route('home') }}"><img src="{{ asset('images/logo.png') }}" alt="Accurate GST Logo" class="h-12 w-auto object-contain py-1"></a>
 <!-- Desktop Links -->
 <div class="hidden md:flex items-center gap-8">
 {!! $navLink('home', 'Home') !!}

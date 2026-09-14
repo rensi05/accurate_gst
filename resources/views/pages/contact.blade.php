@@ -48,23 +48,35 @@
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 lg:grid-cols-2 gap-gutter items-start">
 
 <div class="bg-white rounded-[32px] p-8 md:p-12 card-shadow">
+@if (session('contact_success'))
+<div class="text-center py-12">
+<div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+<span class="material-symbols-outlined text-4xl">check_circle</span>
+</div>
+<h3 class="font-headline-md text-body-lg font-bold mb-2">Message Sent</h3>
+<p class="text-on-surface-variant">Thanks for reaching out &mdash; a practitioner will contact you within one business day.</p>
+</div>
+@else
 <h2 class="font-headline-lg text-headline-md text-on-surface mb-2">Send Us a Message</h2>
 <p class="text-on-surface-variant mb-8">Fill out the form and our team will get back to you within one business day.</p>
-<form id="contactForm" class="space-y-5" data-client-only="true" data-fields-target="#form-fields" data-success-target="#form-success" data-reset-on-success="true">
-<div id="form-fields" class="space-y-5">
+<form action="{{ route('contact-message.store') }}" method="POST" class="space-y-5">
+@csrf
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
 <div>
 <label class="block text-label-md font-label-md font-bold text-on-surface-variant mb-2">Full Name</label>
-<input name="full_name" required type="text" class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+<input name="full_name" value="{{ old('full_name') }}" required type="text" class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+@error('full_name') <p class="text-error text-sm">{{ $message }}</p> @enderror
 </div>
 <div>
 <label class="block text-label-md font-label-md font-bold text-on-surface-variant mb-2">Phone Number</label>
-<input name="phone" required type="tel" class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+<input name="phone" value="{{ old('phone') }}" required type="tel" class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+@error('phone') <p class="text-error text-sm">{{ $message }}</p> @enderror
 </div>
 </div>
 <div>
 <label class="block text-label-md font-label-md font-bold text-on-surface-variant mb-2">Email Address</label>
-<input name="email" required type="email" class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+<input name="email" value="{{ old('email') }}" required type="email" class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">
+@error('email') <p class="text-error text-sm">{{ $message }}</p> @enderror
 </div>
 <div>
 <label class="block text-label-md font-label-md font-bold text-on-surface-variant mb-2">I'm Interested In</label>
@@ -77,18 +89,12 @@
 </div>
 <div>
 <label class="block text-label-md font-label-md font-bold text-on-surface-variant mb-2">Message</label>
-<textarea name="message" required rows="4" class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all"></textarea>
+<textarea name="message" required rows="4" class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all">{{ old('message') }}</textarea>
+@error('message') <p class="text-error text-sm">{{ $message }}</p> @enderror
 </div>
 <button type="submit" class="w-full bg-primary text-white px-8 py-4 rounded-xl font-label-md text-label-md font-bold hover:shadow-lg hover:-translate-y-0.5 active:scale-95 transition-all">Send Message</button>
-</div>
-<div id="form-success" class="hidden text-center py-12">
-<div class="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-<span class="material-symbols-outlined text-4xl">check_circle</span>
-</div>
-<h3 class="font-headline-md text-body-lg font-bold mb-2">Message Sent</h3>
-<p class="text-on-surface-variant">Thanks for reaching out &mdash; a practitioner will contact you within one business day.</p>
-</div>
 </form>
+@endif
 </div>
 
 <div class="space-y-6">
